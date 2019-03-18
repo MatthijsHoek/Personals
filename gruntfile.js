@@ -27,13 +27,8 @@ module.exports = function(grunt) {
             },
             
 			build : {
-                files: [{
-                    expand: true,
-                    src : "**/*.js",
-                    dest : "js-min/main.min.js",
-                    cwd: 'src/js'
-                }]
-				
+				src : ["**/*.js"],
+				dest : "src/js/js-min/main.min.js"
 			}
 
 		},

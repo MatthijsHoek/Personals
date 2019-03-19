@@ -20,18 +20,16 @@ module.exports = function(grunt) {
             }
         },
 
-        uglify : {
-
-			options : {
-				banner : "/*! main.min.js file */\n"
+        uglify: {
+            options: {
+                mangle: false
             },
-            
-			build : {
-				src : ["**/*.js"],
+
+            build : {
+				src : ["src/js/main.js"],
 				dest : "src/js/js-min/main.min.js"
 			}
-
-		},
+        },
 
         watch:{
             options: {
@@ -48,7 +46,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-uglify-es');
     grunt.registerTask('default', ['uglify']);
     
 };

@@ -36,8 +36,8 @@ module.exports = function(grunt) {
                 livereload: true
             },
             css: {
-                files: ['**/*.scss'],
-                tasks: ['sass', 'cssmin']
+                files: ['**/*.scss', 'src/js/*.js'],
+                tasks: ['sass', 'cssmin', 'uglify']
             },
         }
     });
@@ -47,6 +47,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify-es');
-    grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('default', ['watch']);
     
 };

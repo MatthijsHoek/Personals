@@ -1,0 +1,23 @@
+{
+  "name": "personals",
+  "version": "1.0.0",
+  "description": "Repository for personal learning and working.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthijsHoek/Personals.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatthijsHoek/Personals/issues"
+  },
+  "homepage": "https://github.com/MatthijsHoek/Personals#readme"
+}

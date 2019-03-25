@@ -1,7 +1,7 @@
 module.exports = {
     watch: {
         options: {
-            livereload: true
+            livereload: false
         },
         css: {
             files: ['**/*.scss', 'src/js/*.js'],

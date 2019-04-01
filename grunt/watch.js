@@ -4,7 +4,7 @@ module.exports = {
             livereload: false
         },
         css: {
-            files: ['**/*.scss', 'src/js/*.js'],
+            files: ['**/*.scss', 'src/js/**/*.js'],
             tasks: ['sass', 'cssmin', 'uglify']
         },
     }

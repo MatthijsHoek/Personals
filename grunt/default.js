@@ -1,8 +1,3 @@
-module.exports = {
-  default:[
-    'watch',
-    'sass',
-    'cssmin',
-    'uglify'
-  ]
+module.exports = function(grunt) {
+  grunt.registerTask('default', ['watch'])
 };

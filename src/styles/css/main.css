@@ -1,0 +1,12 @@
+.box {
+  background-color: honeydew; }
+  .box__title {
+    font-size: 80px;
+    color: darkmagenta; }
+  .box__button {
+    background-color: aquamarine;
+    color: white;
+    border: none; }
+  .box__text {
+    font-size: 40px;
+    color: skyblue; }

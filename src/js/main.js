@@ -1,7 +1,7 @@
 const button = document.querySelector('.box__button');
 const text = document.querySelector('.box__text');
 const string1 = 'Hello';
-const string2 = 'There!';
+const string2 = 'Daar!';
 
 class Box {
     constructor(button, text, first, second) {

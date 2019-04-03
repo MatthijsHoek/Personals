@@ -1,4 +1,4 @@
-var { src, dest, task, watch } = require('gulp');
+var { src, dest, task, watch, series } = require('gulp');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var cssmin = require('gulp-cssmin');
@@ -8,25 +8,26 @@ var rename = require('gulp-rename');
 task('sass', () => {
   return src("src/styles/sass/*.scss")
   .pipe(sass())
-  .pipe(dest("src/styles/css"))
+  .pipe(dest("src/dist"))
 });
 
 task('cssmin', () => {
-  return src('src/styles/css/main.css')
+  return src('src/dist/main.css')
   .pipe(rename('main.min.css'))
   .pipe(cssmin())
-  .pipe(dest('src/styles/css'));
+  .pipe(dest('src/dist/min'));
 });
 
 task('uglify', () => {
-  return src('src/js/**/*.js')
+  return src('src/js/*.js')
   .pipe(rename('main.min.js'))
   .pipe(uglify())
-  .pipe(dest('src/js/js-min'));
+  .pipe(dest('src/dist/min'));
 });
 
-task('default', () => {
-  watch('src/styles/sass/*.scss', ['sass']);
-  watch('src/styles/css/main.css', ['cssmin']);
-  watch('src/js/**/*.js', ['uglify']);
+task('watch', () => {
+  watch('src/styles/sass/*.scss', ['sass', 'cssmin']);
+  watch('src/js/*.js', ['uglify']);
 });
+
+task('default', series('watch'));

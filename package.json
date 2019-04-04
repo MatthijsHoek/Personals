@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Repository for personal learning and working.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "require-dir": "^1.2.0"
+  },
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-cssmin": "^0.2.0",

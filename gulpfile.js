@@ -26,8 +26,10 @@ task('uglify', () => {
 });
 
 task('watch', () => {
-  watch('src/styles/sass/*.scss', ['sass', 'cssmin']);
-  watch('src/js/*.js', ['uglify']);
+  watch('src/styles/sass/*.scss')
+  .on('change', series('sass', 'cssmin'));
+  watch('src/js/*.js')
+  .on('change', series('uglify'));
 });
 
 task('default', series('watch'));

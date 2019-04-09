@@ -16,7 +16,8 @@
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.0.2",
-    "grunt-watch-change": "^0.1.1"
+    "grunt-watch-change": "^0.1.1",
+    "load-grunt-tasks": "^4.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

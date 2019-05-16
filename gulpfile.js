@@ -2,7 +2,6 @@ var { src, dest, task, watch, series } = require('gulp');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var cssmin = require('gulp-cssmin');
-var uglify = require('gulp-uglify-es').default;
 var rename = require('gulp-rename');
 
 task('sass', () => {
@@ -18,18 +17,9 @@ task('cssmin', () => {
   .pipe(dest('src/dist/min'));
 });
 
-task('uglify', () => {
-  return src('src/js/*.js')
-  .pipe(rename('main.min.js'))
-  .pipe(uglify())
-  .pipe(dest('src/dist/min'));
-});
-
 task('watch', () => {
   watch('src/styles/sass/*.scss')
   .on('change', series('sass', 'cssmin'));
-  watch('src/js/*.js')
-  .on('change', series('uglify'));
 });
 
 task('default', series('watch'));
